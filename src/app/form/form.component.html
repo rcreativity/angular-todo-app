@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()" class="mb-3">
+  <div class="form-group">
+    <label for="name">Enter Name</label>
+    <input 
+    [(ngModel)] = "newName"
+    type="text" 
+    class="form-control" 
+    name="newName"
+    id="name" 
+    placeholder="please enter name">
+  </div>
+  <button  type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,18 @@
+<ul class="list-group">
+  <li *ngFor="let name of names; let i = index" 
+  class="list-group-item"
+  [ngClass]="{'name-done':name.isDone}">
+      <button
+      *ngIf="!name.isDone"
+      (click)="name.isDone = true"
+       type="button" 
+       class="btn btn-success">
+       Done</button>&nbsp;&nbsp;
+       <button
+      (click)="removeName(i)"
+       type="button" 
+       class="btn btn-danger">
+       Remove</button>
+      &nbsp;&nbsp;<span>{{name.title}}</span> -  <span>{{name.isDone}}</span>
+  </li>
+</ul>
